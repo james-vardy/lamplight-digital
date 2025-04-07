@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>James Vardy | Leeds Web Developer &amp; IT Specialist</title>
+    <!-- Font Awesome Kit for day/night icons -->
+    <script
+      src="https://kit.fontawesome.com/4aa44e08c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Ensure full height and sticky footer using Flexbox */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: "Roboto", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      /* Default Light Mode Variables */
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --header-bg: #35424a;
+        --header-text: #ffffff;
+        --link-color: #35424a;
+        --link-hover: #1d1d1d;
+      }
+      /* Dark Mode Overrides via manual toggle */
+      .dark-theme {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --header-bg: #1f1f1f;
+        --header-text: #e0e0e0;
+        --link-color: #bb86fc;
+        --link-hover: #3700b3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      header {
+        background-color: var(--header-bg);
+        color: var(--header-text);
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      header h1 {
+        font-size: 2.5em;
+        animation: slideIn 1s ease-out;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: var(--header-text);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: var(--link-hover);
+      }
+      .main-content {
+        flex: 1;
+        max-width: 960px;
+        width: 100%;
+        margin: 40px auto;
+        padding: 20px;
+        animation: fadeIn 1.5s ease-out;
+      }
+      section {
+        margin-bottom: 40px;
+        background: var(--bg-color);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+      section:hover {
+        transform: translateY(-5px);
+      }
+      h2 {
+        margin-bottom: 15px;
+        font-size: 1.8em;
+      }
+      a.external-link {
+        color: var(--link-color);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+      a.external-link:hover {
+        color: var(--link-hover);
+      }
+      footer {
+        background-color: var(--header-bg);
+        color: var(--header-text);
+        text-align: center;
+        padding: 15px 0;
+        font-size: 0.9em;
+      }
+      .theme-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 1.2em;
+        color: var(--header-text);
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .theme-toggle:hover {
+        color: var(--link-hover);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </button>
+      <h1>James Vardy</h1>
+      <p>Leeds Based Web Developer &amp; IT Specialist</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-content">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am James Vardy, a Leeds based Web Developer and IT Specialist with
+          extensive experience in designing, developing, and hosting modern
+          websites. I specialize in creating sleek and functional online
+          experiences.
+        </p>
+      </section>
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>
+          I designed, developed, and host the website for
+          <a
+            class="external-link"
+            href="http://www.harrietforster.com"
+            target="_blank"
+            >Harriet Forster</a
+          >.
+        </p>
+        <p>
+          I also collaborate with local producer Evan Martin at
+          <a
+            class="external-link"
+            href="http://www.marvinmarvinproductions.com"
+            target="_blank"
+            >Marvin Marvin Productions</a
+          >.
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          If you'd like to work together or learn more, drop me an email at
+          <a class="external-link" href="mailto:james.vardyc@gmail.com"
+            >james.vardyc@gmail.com</a
+          >.
+        </p>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2025 James Vardy. All Rights Reserved.</p>
+    </footer>
+    <script>
+      // On page load, check stored theme preference
+      document.addEventListener("DOMContentLoaded", function () {
+        const storedTheme = localStorage.getItem("theme");
+        const themeIcon = document.getElementById("theme-icon");
+        if (storedTheme === "dark") {
+          document.body.classList.add("dark-theme");
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+        } else {
+          document.body.classList.remove("dark-theme");
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+        }
+      });
+      function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById("theme-icon");
+        body.classList.toggle("dark-theme");
+        if (body.classList.contains("dark-theme")) {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+          localStorage.setItem("theme", "dark");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+          localStorage.setItem("theme", "light");
+        }
+      }
+    </script>
+  </body>
+</html>
