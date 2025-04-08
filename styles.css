@@ -1,0 +1,230 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default Light Mode Variables */
+:root {
+  --bg-color: #fdf6e3; /* Warm light background */
+  --text-color: #333333; /* Dark text for readability */
+  --header-bg: #ffcc66; /* Warm lamplight header */
+  --header-text: #4a4a4a; /* Darker text for contrast */
+  --link-color: #ff9900; /* Accent color for links */
+  --link-hover: #cc7a00; /* Darker hover for links */
+}
+
+/* Dark Mode Overrides via manual toggle */
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-bg: #1f1f1f;
+  --header-text: #e0e0e0;
+  --link-color: #bb86fc;
+  --link-hover: #3700b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 40px 10px; /* Reduced padding for a more compact header */
+  text-align: center;
+  position: relative;
+  overflow: visible; /* Allow content to overflow if necessary */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+}
+
+header h1 {
+  font-size: 4em; /* Larger font size for emphasis */
+  font-weight: bold;
+  margin-bottom: 20px; /* Added spacing below the title */
+  color: var(--header-text);
+  animation: none; /* Removed animation for simplicity */
+}
+
+header p {
+  font-size: 1.5em; /* Larger font for better readability */
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--link-hover);
+}
+
+a {
+  color: var(--link-color); /* Ensure all links use the warm orange color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover); /* Darker hover color for links */
+}
+
+.main-content {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+section {
+  margin-bottom: 40px;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+a.external-link {
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a.external-link:hover {
+  color: var(--link-hover);
+}
+
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1em;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.2em;
+  color: var(--header-text);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--link-hover);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 20px;
+  color: var(--header-text);
+  font-size: 2.5em;
+  transition: color 0.3s ease;
+}
+
+social-icons a:hover {
+  color: var(--link-hover);
+}
+
+#about .about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start; /* Align items to the top */
+}
+
+#about .about-text {
+  flex: 2; /* Make text take more space */
+  min-width: 300px;
+}
+
+#about .about-image {
+  flex: 1; /* Make image take less space */
+  min-width: 150px;
+  text-align: center;
+}
+
+#about .about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tech-container img {
+  max-width: 80px; /* Reduced size for logos */
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tech-container img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
