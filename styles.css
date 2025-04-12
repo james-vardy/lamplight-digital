@@ -181,16 +181,14 @@ social-icons a:hover {
   min-width: 300px;
 }
 
+/* Removed redundant styles related to the about image */
+
 #about .about-image {
-  flex: 1; /* Make image take less space */
-  min-width: 150px;
-  text-align: center;
+  display: none;
 }
 
 #about .about-image img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .tech-container img {
@@ -201,64 +199,6 @@ social-icons a:hover {
 
 .tech-container img:hover {
   transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-/* Contact Form Styles */
-.contact-form {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: var(--bg-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-  font-family: inherit;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--link-color);
-  outline: none;
-}
-
-.contact-form button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background: var(--link-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: var(--link-hover);
-}
-
-#formResponse {
-  margin-top: 15px;
-  font-size: 1em;
-  text-align: center;
 }
 
 /* Logo Circle Styles */
