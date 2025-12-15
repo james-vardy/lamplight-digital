@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Abordage-Regular";
+  src: url("Abordage-Regular.woff") format("woff"),
+    url("Abordage-Regular.ttf") format("truetype"),
+    url("Abordage-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   height: 100%;
@@ -8,7 +18,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abordage-Regular", "Roboto", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
