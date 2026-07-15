@@ -17,5 +17,14 @@ window
     }
   });
 
+// Anchor links should land just below the sticky nav, so match the
+// scroll offset to its real rendered height.
+const nav = document.querySelector(".site-nav");
+const setScrollPadding = () => {
+  root.style.scrollPaddingTop = `${nav.offsetHeight + 12}px`;
+};
+setScrollPadding();
+window.addEventListener("resize", setScrollPadding);
+
 // Keep the copyright year current.
 document.getElementById("year").textContent = new Date().getFullYear();

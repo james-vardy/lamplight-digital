@@ -39,7 +39,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  /* Fallback offset for the sticky nav; scripts.js sets the exact
+     measured value. */
+  scroll-padding-top: 4.5rem;
 }
 
 html,
@@ -171,13 +173,29 @@ img {
 
 .theme-toggle:hover {
   color: var(--accent);
-  transform: rotate(15deg);
+}
+
+/* Only tilt on devices with a real hover — on touch screens the
+   hover state sticks after a tap and the button never untilts. */
+@media (hover: hover) {
+  .theme-toggle:hover {
+    transform: rotate(15deg);
+  }
 }
 
 /* Show the icon for the mode you'd switch to */
 :root[data-theme="light"] .icon-sun,
 :root[data-theme="dark"] .icon-moon {
   display: none;
+}
+
+/* On narrow screens the full nav can't fit on one row and wraps
+   awkwardly; drop the wordmark and keep the lamp so everything
+   stays on a single line. */
+@media (max-width: 480px) {
+  .brand-name {
+    display: none;
+  }
 }
 
 /* Navy lamp by day, cream lamp by night */
