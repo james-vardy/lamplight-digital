@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Abordage-Regular";
-  src: url("Abordage-Regular.woff2") format("woff2"),
-    url("Abordage-Regular.woff") format("woff");
+  src: url("Abordage-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -134,7 +133,6 @@ img {
 .brand-mark {
   width: 36px;
   height: 36px;
-  image-rendering: pixelated;
 }
 
 .brand-name {
@@ -206,7 +204,6 @@ img {
   display: block;
   width: 96px;
   height: 96px;
-  image-rendering: pixelated;
 }
 
 .hero h1 {
@@ -362,60 +359,6 @@ h2 {
 
 .external-link {
   font-size: 0.95rem;
-}
-
-/* ---- Services & tools ---- */
-.services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 1.5rem 2.5rem;
-  max-width: 52rem;
-}
-
-.service h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
-}
-
-.service h3::before {
-  content: "";
-  display: inline-block;
-  width: 0.5em;
-  height: 0.5em;
-  margin-right: 0.45em;
-  background: var(--accent);
-}
-
-.service p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-
-.tech-caption {
-  margin: 2.25rem 0 0.75rem;
-  color: var(--muted);
-  font-style: italic;
-}
-
-.tech-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.tech-strip img {
-  width: 32px;
-  height: 32px;
-  filter: grayscale(0.5);
-  opacity: 0.8;
-  transition: filter 0.2s ease, opacity 0.2s ease;
-}
-
-.tech-strip img:hover {
-  filter: none;
-  opacity: 1;
 }
 
 /* ---- About ---- */
